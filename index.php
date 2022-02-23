@@ -38,7 +38,12 @@
         <ul class="icon-list">
         <li>Lenguaje libre, el cual puede  ser editado fácilmente por cualquier desarrollador o programador. </li>
         <li>Permite crear entornos de trabajo fácilmente.</li>
-        </ul>
+        <hr>
+        <li><a href="./eplicaciones/">Explicaciones</a></li>
+        <li><a href="./ejercicio/">Ejercicios</a></li>
+        <li><a href=""></a></li>    
+    
+    </ul>
     </div>
 
     <div class="col-md-6">

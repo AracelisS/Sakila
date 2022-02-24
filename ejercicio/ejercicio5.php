@@ -12,9 +12,16 @@
 
 <body>
     <br>
-    <h5>Generar los numeros del 1 al 100</h5>
+    <div class="container w-25">
+        <h5>Generar los numeros del 1 al 100</h5>
+        <?php
+        echo "Parte de PHP<br>";
 
-
+        for ($i = 1; $i < 101; $i++) {
+            echo "Numero- " . $i . "<br>";
+        }
+        ?>
+    </div>
     <!--<ul class="container w-25">
         <li>1</li>
         <li>2</li>

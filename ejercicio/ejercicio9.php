@@ -22,6 +22,16 @@
         </form>
         <?php
         print_r($_GET);
+        //Variable donde almacenamos el número que comprobaremos
+        $num = $_GET["numero"];
+        //Comprobamos si num es un número par o no
+        if (($num % 2) == 0) {
+            //Es un número par
+            echo 'Es un número par';
+        } else {
+            //Es un número impar
+            echo 'Es un número impar';
+        }
         ?>
 
     </div>

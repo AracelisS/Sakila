@@ -29,7 +29,8 @@
             </div>
             -->
             <div class="wb-3">
-                <label for="">Digita numero</label><input type="text">
+                <label for="">Digita numero</label>
+                <input type="text" name="numero" class="form-control">
             </div>
             <br>
             <button class="btn btn-danger">Enviar</button>
@@ -37,6 +38,24 @@
         <br>
         <?php
         print_r($_GET);
+        $numero = $_GET["numero"];
+        if ($numero == 1) {
+            echo "Hoy es Lunes";
+        } elseif ($numero == 2) {
+            echo "Hoy es Martes";
+        } elseif ($numero == 3) {
+            echo "Hoy es Miercoles";
+        } elseif ($numero == 4) {
+            echo "Hoy es Jueves";
+        } elseif ($numero == 5) {
+            echo "Hoy es Viernes";
+        } elseif ($numero == 6) {
+            echo "Hoy es Sabado";
+        } elseif ($numero == 7) {
+            echo "Hoy es Domingo";
+        } else {
+            echo "Valor no valido";
+        }
         ?>
     </div>
 </body>

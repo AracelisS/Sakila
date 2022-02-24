@@ -28,6 +28,10 @@
         <br>
         <?php
         print_r($_GET);
+        $naci = $_GET["año"];
+        $año_actual = $_GET["año_actual"];
+        $resultado = ($año_actual - $naci);
+        echo "Tu edad es: " . "$resultado";
         ?>
     </div>
 </body>

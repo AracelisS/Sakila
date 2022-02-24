@@ -17,7 +17,8 @@
             <h5>Cual mes del año es</h5>
 
             <div class="wb-3">
-                <label for="">Digita numero</label><input type="text">
+                <label for="">Digita numero</label>
+                <input type="text" name="numero" class="form-control">
             </div>
             <br>
             <button class="btn btn-danger">Enviar</button>
@@ -25,6 +26,35 @@
         <br>
         <?php
         print_r($_GET);
+        $numero = $_GET["numero"];
+        if ($numero == 1) {
+            echo "Estamos en Enero";
+        } elseif ($numero == 2) {
+            echo "Estamos en Febrero";
+        } elseif ($numero == 3) {
+            echo "Estamos en Marzo";
+        } elseif ($numero == 4) {
+            echo "Estamos en Abril";
+        } elseif ($numero == 5) {
+            echo "Estamos en Mayo";
+        } elseif ($numero == 6) {
+            echo "Estamos en Junio";
+        } elseif ($numero == 7) {
+            echo "Estamos en Julio";
+        } elseif ($numero == 8) {
+            echo "Estamos en Agosto";
+        } elseif ($numero == 9) {
+            echo "Estamos en Septiembre";
+        } elseif ($numero == 10) {
+            echo "Estamos en Optubre";
+        } elseif ($numero == 11) {
+            echo "Estamos en Noviembre";
+        } elseif ($numero == 12) {
+            echo "Estamos en Diciembre";
+        } else {
+            echo "Valor no valido";
+        }
+        ?>
         ?>
     </div>
     </form>

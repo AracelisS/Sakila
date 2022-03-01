@@ -16,7 +16,7 @@
         <h5>Numero par o impar</h5>
         <form action="" method="get">
             <label for="">Digita el numero</label>
-            <input type="text" name="numero" class="form-control">
+            <input type="number" name="numero" class="form-control">
             <br>
             <button class="btn btn-danger">Verificar</button>
         </form>

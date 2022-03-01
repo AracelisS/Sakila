@@ -21,7 +21,7 @@
             </div>
             <div class="mb-3">
                 <label for="">Año actual</label>
-                <input type="text" name="año_actual" class="form-control">
+                <input type="number" name="año_actual" class="form-control">
             </div>
             <button class="btn btn-danger">Calcular</button>
         </form>

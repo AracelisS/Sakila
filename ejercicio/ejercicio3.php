@@ -22,7 +22,7 @@
             </div>
             <div class="mb-3">
                 <label for="">Tiempo</label>
-                <input type="text" name="tiempo" class="form-control">
+                <input type="number" name="tiempo" class="form-control">
             </div>
             <button class="btn btn-danger">Calcular</button>
         </form>

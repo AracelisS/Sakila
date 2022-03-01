@@ -17,11 +17,11 @@
         <form action="" method="get">
             <div class="mb-3">
                 <label for="">Cateto 1</label>
-                <input type="text" name="cateto1" class="form-control">
+                <input type="number" name="cateto1" class="form-control">
             </div>
             <div class="mb-3">
                 <label for="">Cateto 2</label>
-                <input type="text" name="cateto2" class="form-control">
+                <input type="number" name="cateto2" class="form-control">
             </div>
             <button class="btn btn-danger">Calcular</button>
         </form>

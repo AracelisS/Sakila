@@ -30,7 +30,7 @@
             -->
             <div class="wb-3">
                 <label for="">Digita numero</label>
-                <input type="text" name="numero" class="form-control">
+                <input type="number" name="numero" class="form-control">
             </div>
             <br>
             <button class="btn btn-danger">Enviar</button>

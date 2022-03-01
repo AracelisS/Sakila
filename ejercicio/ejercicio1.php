@@ -19,11 +19,11 @@
             <h5>Buscar la hipotenusa</h5>
             <div class="mb-3">
                 <label for="">Base</label>
-                <input type="text" name="base" class="form-control">
+                <input type="number" name="base" class="form-control">
             </div>
             <div class="mb-3">
                 <label for="">Altura</label>
-                <input type="text" name="altura" class="form-control">
+                <input type="number" name="altura" class="form-control">
             </div>
             <button class="btn btn-danger">Calcular</button>
         </form>

@@ -18,19 +18,19 @@
             <form action="" method="get">
                 <div class="mb-3">
                     <label for="">Nota 1</label>
-                    <input type="text" name="nota1" class="form-control">
+                    <input type="number" name="nota1" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="">Nota 2</label>
-                    <input type="text" name="nota2" class="form-control">
+                    <input type="number" name="nota2" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="">Nota 3</label>
-                    <input type="text" name="nota3" class="form-control">
+                    <input type="number" name="nota3" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="">Nota 4</label>
-                    <input type="text" name="nota4" class="form-control">
+                    <input type="number" name="nota4" class="form-control">
                 </div>
                 <button class="btn btn-danger">Calcular</button>
             </form>

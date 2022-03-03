@@ -1,1 +1,2 @@
-FOOTER:aqui van los script
+<!-- JavaScript Bundle with Popper -->
+parte_footer

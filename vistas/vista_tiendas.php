@@ -16,9 +16,36 @@ require_once "parte_head.php";
 
         <div class="row">
             <div class="col-6">
-                aqui va el formulario
+                <form class="col-6" method="post">
+                    <div class="mb-3">
+                        <label for="">Nombre</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <button name="boton-guardar" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+                <br>
+                <?php if (!empty($error)) : ?>
+
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <?php
+                        echo  $error;
+                        ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php endif; ?>
             </div>
             <br>
+            <?php if (!empty($error)) : ?>
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <?php
+                    echo  $error;
+                    ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php endif; ?>
         </div>
 
         <div class="row">
@@ -44,6 +71,10 @@ require_once "parte_head.php";
                     <?php
 
                     $query = "SELECT * FROM store";
+                    $buscador = $_GET['buscador'] ?? "";
+                    if ($buscador != "") {
+                        $query = "SELECT * FROM store WHERE manager_staff_id='$buscador'";
+                    }
                     $resultado = mysqli_query($conexion, $query);
                     if ($resultado) {
                         while ($fila = mysqli_fetch_assoc($resultado)) {
@@ -59,12 +90,7 @@ require_once "parte_head.php";
                     }
 
                     ?>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
+
 
                 </tbody>
             </table>

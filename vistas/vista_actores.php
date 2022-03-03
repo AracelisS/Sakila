@@ -11,16 +11,39 @@ require_once "parte_head.php";
     <?php
     require_once "parte_menu.php";
     ?>
-    <div class="container ">
+    <div class="container w-100">
         <h3><?php echo $pagina; ?></h3>
 
         <div class="row">
             <div class="col-6">
-                aqui va el formulario
+                <form class="col-6" method="post">
+                    <div class="mb-3">
+                        <label for="">Nombre</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <button name="boton-guardar" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+                <br>
+                <?php if (!empty($error)) : ?>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                    crossorigin="anonymous">
+                </script>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <?php
+                        echo  $error;
+                        ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php endif; ?>
             </div>
             <br>
-        </div>
 
+
+        </div>
+        <br>
         <div class="row">
             <div class="col-4 ">
                 <form class="input-group mb-3">
@@ -44,6 +67,12 @@ require_once "parte_head.php";
                     <?php
 
                     $query = "SELECT * FROM actor";
+                    $buscador = $_GET['buscador'] ?? "";
+                    if ($buscador != "") {
+                        $query = "SELECT * FROM actor WHERE first_name ='$buscador'";
+                    }
+
+
                     $resultado = mysqli_query($conexion, $query);
                     if ($resultado) {
                         while ($fila = mysqli_fetch_assoc($resultado)) {
@@ -59,12 +88,7 @@ require_once "parte_head.php";
                     }
 
                     ?>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
+
 
                 </tbody>
             </table>

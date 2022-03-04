@@ -1,4 +1,6 @@
 <?php
+require_once "recursos/conexion.php";
+require_once "recursos/funciones.php";
 $pagina = "Categorias";
 $error = "";
 
@@ -18,8 +20,18 @@ try {
             throw new Exception("El nombre no puede estar vacio");
         }
         //guardar
+        $query = "INSERT INTO category (name) VALUES ('$name')";
+        echo $query;
+        $resultado = $conexion->query($query) or die("Error en query");
+
+        if ($resultado) {
+            $_SESSION["maensaje"] = "Datos insertados correctamente";
+        } else {
+            throw new Exception("No se pudo insertar los datos");
+        }
 
         //refrezcar
+        refrezcar("categorias.php");
     }
     throw new Exception("wey, klk");
 } catch (Throwable $ex) {

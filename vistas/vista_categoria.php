@@ -37,6 +37,21 @@ require_once "parte_head.php";
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <?php endif; ?>
+
+
+
+            <?php if (!empty($_SESSION["mensaje"])) : ?>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous">
+            </script>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <?php
+                    echo  $error;
+                    ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php endif; ?>
         </div>
 
         <div class="row">

@@ -1,4 +1,6 @@
 <?php
+require_once "recursos/conexion.php";
+require_once "recursos/funciones.php";
 $pagina = "Paises";
 $error = "";
 
@@ -12,12 +14,24 @@ try {
     if (isset($_POST['boton-guardar'])) {
         echo "guardando...";
         // variable
-
-        // validaciones
-
+        $country = $_POST["country"];
+        //validaciones
+        if (empty($country)) {
+            throw new Exception("El nombre no puede estar vacio");
+        }
         //guardar
+        $query = "INSERT INTO country (country) VALUES ('$country')";
+        echo $query;
+        $resultado = $conexion->query($query) or die("Error en query");
+
+        if ($resultado) {
+            $_SESSION["maensaje"] = "Datos insertados correctamente";
+        } else {
+            throw new Exception("No se pudo insertar los datos");
+        }
 
         //refrezcar
+        refrezcar("paises.php");
     }
     throw new Exception("wey, klk");
 } catch (Throwable $ex) {

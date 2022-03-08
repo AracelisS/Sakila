@@ -26,7 +26,9 @@ try {
 
         if ($resultado) {
             $_SESSION["maensaje"] = "Datos insertados correctamente";
+            $script_alerta = alerta("Insertado", "correctamente", "success");
         } else {
+            $script_alerta = alerta("Error", "No se puede insertar", "error");
             throw new Exception("No se pudo insertar los datos");
         }
 

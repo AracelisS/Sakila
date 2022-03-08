@@ -18,10 +18,27 @@ require_once "parte_head.php";
             <div class="col-6">
                 <form class="col-6" method="post">
                     <div class="mb-3">
-                        <label for="">Nombre</label>
-                        <input type="text" name="name" class="form-control">
+                        <label for="">Ciudad</label>
+                        <input type="text" name="city" class="form-control">
                     </div>
                     <div class="mb-3">
+
+
+                        <label for="">Paises</label>
+                        <select class="form-select" aria-label="Default select example" name="country_id">
+
+                            <option value="" selected>Selecciona</option>
+                            <?php
+                            $query = "SELECT * FROM country";
+                            $resultado = mysqli_query($conexion, $query);
+                            if ($resultado) {
+                                while ($fila = mysqli_fetch_object($resultado)) {
+                                    echo "<option value='$fila->country_id'>$fila->country</oction>";
+                                }
+                            }
+                            ?>
+                        </select>
+                        <br>
                         <button name="boton-guardar" class="btn btn-primary">Guardar</button>
                     </div>
                 </form>
@@ -46,6 +63,7 @@ require_once "parte_head.php";
             <div class="col-4 ">
                 <form class="input-group mb-3">
                     <input type="text" name="buscador" class="form-control" placeholder="Buscador">
+
                     <button class="btn btn-outline-secondary" type="submit" name="boton_buscar" id="boton-buscar"><i
                             class="bi bi-search"></i>Buscar</button>
                 </form>

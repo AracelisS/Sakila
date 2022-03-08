@@ -26,12 +26,23 @@ try {
 
         if ($resultado) {
             $_SESSION["maensaje"] = "Datos insertados correctamente";
+            $script_alerta = alerta("Insertado", "correctamente", "success");
+        } //guardar
+        $query = "INSERT INTO country (country) VALUES ('$name')";
+
+        echo $query;
+        $resultado = $conexion->query($query) or die("Error en query");
+
+        if ($resultado) {
+            $_SESSION["maensaje"] = "Datos insertados correctamente";
+            $script_alerta = alerta("Insertado", "correctamente", "success");
         } else {
+            $script_alerta = alerta("Error", "No se puede insertar", "error");
             throw new Exception("No se pudo insertar los datos");
         }
-
         //refrezcar
-        refrezcar("paises.php");
+
+        //refrezcar("paises.php");
     }
     throw new Exception("wey, klk");
 } catch (Throwable $ex) {

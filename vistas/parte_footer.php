@@ -6,9 +6,7 @@
 </script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
-swal({
-    title: "Good job!",
-    text: "You clicked the button!",
-    icon: "success",
-});
+<?php
+    echo $script_alerta;
+    ?>
 </script>

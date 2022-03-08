@@ -17,9 +17,7 @@
 <body>
 
 
-    <div>
 
-    </div>
 
     <div class="col-lg-8 mx-auto p-3 py-md-5">
         <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
@@ -73,6 +71,67 @@
                 </div>
             </div>
         </main>
+        <div class="row text-center">
+            <div class="col-3">
+                <span class="fs-1"> <i class="bi bi-person-circle"></i></span>
+                <a href="./actores.php">
+                    <h3>Actores</h3>
+                </a>
+
+            </div>
+            <div class="col-3">
+                <span class="fs-1"> <i class="bi bi-bar-chart-steps"></i></span>
+                <a href="./categorias.php">
+                    <h3>Categorias</h3>
+                </a>
+            </div>
+            <div class="col-3">
+                <span class="fs-1"> <i class="bi bi-building"></i></span>
+                <a href="./ciudades.php">
+                    <h3>Ciudades</h3>
+                </a>
+
+            </div>
+            <div class="col-3">
+                <span class="fs-1"> <i class="bi bi-person-video2"></i></span>
+                <a href="./clientes.php">
+                    <h3>Clientes</h3>
+                </a>
+
+            </div>
+            <div class="col-3">
+                <span class="fs-1"><i class="bi bi-three-dots-vertical"></i></span>
+                <a href="./idiomas.php">
+                    <h3>Idiomas</h3>
+                </a>
+
+            </div>
+            <div class="col-3">
+                <span class="fs-1"><i class="bi bi-bank"></i></span>
+                <a href="./paises.php">
+                    <h3>Paises</h3>
+                </a>
+
+            </div>
+            <div class="col-3">
+                <span class="fs-1"><i class="bi bi-boombox-fill"></i></span>
+                <a href="./peliculas.php">
+                    <h3>Peliculas</h3>
+                </a>
+            </div>
+            <div class="col-3">
+                <span class="fs-1"><i class="bi bi-clipboard2-pulse-fill"></i></span>
+                <a href="./staff.php">
+                    <h3>Staff</h3>
+                </a>
+            </div>
+            <div class="col-3">
+                <span class="fs-1"><i class="bi bi-eyeglasses"></i></span>
+                <a href="./tiendas.php">
+                    <h3>Tienda</h3>
+                </a>
+            </div>
+        </div>
         <footer class="pt-5 my-5 text-muted border-top">
             Creado por Aracelis Severino 2022
         </footer>

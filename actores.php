@@ -16,12 +16,16 @@ try {
         echo "guardando...";
         // variable
         $name = $_POST["name"];
+        $apellido = $_POST["last_name"];
         // validaciones
         if (empty($name)) {
             throw new Exception("El nombre no puede estar vacio");
         }
+        if (empty($apellido)) {
+            throw new Exception("El Apellido no puede estar vacio");
+        }
         //guardar
-        $query = "INSERT INTO actor (first_name) VALUES ('$name')";
+        $query = "INSERT INTO actor (first_name,last_name) VALUES ('$name','$apellido')";
 
         echo $query;
         $resultado = $conexion->query($query) or die("Error en query");

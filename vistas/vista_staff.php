@@ -19,7 +19,50 @@ require_once "parte_head.php";
                 <form class="col-6" method="post">
                     <div class="mb-3">
                         <label for="">Nombre</label>
-                        <input type="text" name="name" class="form-control">
+                        <input type="text" name="first_name" class="form-control">
+                        <label for="">Apellido</label>
+                        <input type="text" name="last_name" class="form-control">
+                        <br>
+                        <label for="">Direccion</label>
+                        <br>
+                        <select name="address_id" id="">
+                            <option value="">Selecciona</option>
+                            <?php
+                            $query = "SELECT * FROM staff";
+                            $resultado = mysqli_query($conexion, $query);
+                            if ($resultado) {
+                                while ($fila = mysqli_fetch_object($resultado)) {
+                                    echo "<option value='$fila->first_name'>$fila->staff</oction>";
+                                }
+                            }
+
+                            ?>
+                        </select>
+                        <br><br>
+                        <label for="">Correo</label>
+                        <input type="text" name="email" class="form-control">
+                        <br>
+                        <label for="">Tienda</label>
+                        <br>
+                        <select name="store_id" id="">
+                            <option value="">Seleciona</option>
+                            <option value="">kahlahlhal</option>
+                            <?php
+                            $query = "SELECT * FROM store";
+                            $resultado = mysqli_query($conexion, $query);
+                            if ($resultado) {
+                                while ($fila = mysqli_fetch_object($resultado)) {
+                                    echo "<option value='$fila->manager_staff_id'>$fila->store</oction>";
+                                }
+                            }
+
+                            ?>
+                        </select>
+                        <br><br>
+                        <label for="">Usuario</label>
+                        <input type="text" name="username" class="form-control">
+                        <label for="">Contraseña</label>
+                        <input type="text" name="password" class="form-control">
                     </div>
                     <div class="mb-3">
                         <button name="boton-guardar" class="btn btn-primary">Guardar</button>

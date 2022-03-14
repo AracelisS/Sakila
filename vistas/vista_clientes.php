@@ -18,8 +18,26 @@ require_once "parte_head.php";
             <div class="col-6">
                 <form class="col-6" method="post">
                     <div class="mb-3">
+                        <label for="">Historial_id</label>
+                        <br>
+                        <select name="store_id" id="">
+                            <option value="">Selecciona</option>
+                        </select>
+                        <br>
                         <label for="">Nombre</label>
                         <input type="text" name="name" class="form-control">
+                        <label for="">Apellido</label>
+                        <input type="text" name="last_name" class="form-control">
+                        <label for="">Email</label>
+                        <input type="text" name="email" class="form-control">
+                        <label for="">Direccion</label>
+                        <br>
+                        <select name="address_id" id="">
+                            <option value="">Selecciona</option>
+                        </select>
+                        <br><br>
+                        <label for="">Fecha de creacion</label>
+                        <input type="text" name="create_date" class="form-control">
                     </div>
                     <div class="mb-3">
                         <button name="boton-guardar" class="btn btn-primary">Guardar</button>

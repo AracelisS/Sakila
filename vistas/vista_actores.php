@@ -20,6 +20,8 @@ require_once "parte_head.php";
                     <div class="mb-3">
                         <label for="">Nombre</label>
                         <input type="text" name="name" class="form-control">
+                        <label for="">Apellido</label>
+                        <input type="text" class="form-control" name="last_name">
                     </div>
                     <div class="mb-3">
                         <button name="boton-guardar" class="btn btn-primary">Guardar</button>

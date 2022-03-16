@@ -70,8 +70,8 @@ require_once "parte_head.php";
                         <th scope="col">ID categoria</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Fecha de Actualizacion</th>
-
                     </tr>
+
                 </thead>
                 <tbody>
 
@@ -95,6 +95,10 @@ require_once "parte_head.php";
                         <td>${fila['name']}</td>
 
                         <td>${fila['last_update']}</td>
+                        <td><a href='{$_SERVER['PHP_SELF']}?editar={$fila['category_id']}'>Editar</a> </td>
+                        <td><a href='{$_SERVER['PHP_SELF']}?eliminar={$fila['category_id']}'>Eliminar</a> </td>
+
+
                     </tr>
                     ";
                         }

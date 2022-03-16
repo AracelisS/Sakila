@@ -50,7 +50,7 @@ VALUES ('$first_name','$last_name','$address_id','$email','$store_id','$username
         //refrezcar
         echo $query;
     }
-    throw new Exception("wey, klk");
+    //throw new Exception("wey, klk");
 } catch (Throwable $ex) {
     $error = $ex->getMessage();
 }

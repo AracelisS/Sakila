@@ -35,7 +35,6 @@ try {
         //refrezcar
         refrezcar("idiomas.php");
     }
-    throw new Exception("wey, klk");
 } catch (Throwable $ex) {
     $error = $ex->getMessage();
 }

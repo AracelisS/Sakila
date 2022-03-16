@@ -84,6 +84,7 @@ require_once "parte_head.php";
                                 <td>${fila['first_name']}</td>
                                 <td>${fila['last_name']}</td>
                                 <td>${fila['last_update']}</td>
+                                
                             </tr>
                             ";
                         }

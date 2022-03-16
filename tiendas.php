@@ -38,7 +38,7 @@ try {
     }
     //refrezcar
 
-    throw new Exception("wey, klk");
+
 } catch (Throwable $ex) {
     $error = $ex->getMessage();
 }

@@ -44,7 +44,6 @@ try {
 
         //refrezcar("paises.php");
     }
-    throw new Exception("wey, klk");
 } catch (Throwable $ex) {
     $error = $ex->getMessage();
 }
